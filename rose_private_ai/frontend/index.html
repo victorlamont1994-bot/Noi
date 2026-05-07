@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ROSE Private AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="./style.css" rel="stylesheet" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Chromebook-light private AI</p>
+        <h1>ROSE ⚖️</h1>
+        <p class="subtitle">UCC / Consumer Law / Forensic Audit Professor</p>
+      </div>
+      <div class="status" id="status">Checking API...</div>
+    </section>
+
+    <section class="panel">
+      <h2>Execution Gate</h2>
+      <p class="muted">Optional API key. Required only when backend .env has REQUIRE_API_KEY=true.</p>
+      <div class="row">
+        <input id="apiKey" type="password" placeholder="ROSE API key" />
+        <button id="saveKeyBtn">Save Key</button>
+        <button id="clearKeyBtn">Clear Key</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Upload Source</h2>
+      <p class="muted">Upload .txt, .md, .html, or .pdf files. Keep PDFs modest on Chromebook.</p>
+      <div class="row">
+        <input id="fileInput" type="file" />
+        <button id="uploadBtn">Ingest</button>
+      </div>
+      <pre id="uploadResult"></pre>
+    </section>
+
+    <section class="panel chat">
+      <h2>Ask ROSE</h2>
+      <textarea id="message" placeholder="Ask ROSE about a source, UCC section, consumer law issue, audit trail, or evidence defect..."></textarea>
+      <div class="row">
+        <label><input id="strictSources" type="checkbox" /> strict source mode</label>
+        <button id="sendBtn">Run Analysis</button>
+      </div>
+      <div id="answer" class="answer"></div>
+      <details>
+        <summary>Sources</summary>
+        <pre id="sources"></pre>
+      </details>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
